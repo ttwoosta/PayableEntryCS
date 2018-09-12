@@ -64,5 +64,9 @@ namespace PayableEntry
             this.DialogResult = DialogResult.OK;
         }
 
+        private void frmFindVendor_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

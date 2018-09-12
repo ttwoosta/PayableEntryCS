@@ -17,7 +17,6 @@ namespace PayableEntry
             InitializeComponent();
         }
 
-        public bool addVendor;
         public Vendor vendor;
         private Vendor newVendor;
         private Binding phoneBinding;
@@ -27,7 +26,7 @@ namespace PayableEntry
         {
             this.LoadComboBoxes();
 
-            if (addVendor)
+            if (vendor == null)
             {
                 this.Text = "Add Vendor";
                 newVendor = new Vendor();
@@ -129,7 +128,7 @@ namespace PayableEntry
         {
             if (IsValidData())
             {
-                if (addVendor)
+                if (vendor == null)
                 {
                     try
                     {
@@ -196,6 +195,11 @@ namespace PayableEntry
             }
             else
                 return false;
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

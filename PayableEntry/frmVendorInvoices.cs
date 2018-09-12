@@ -104,7 +104,6 @@ namespace PayableEntry
         private void btnAddVendor_Click(object sender, EventArgs e)
         {
             frmAddModifyVendor addModifyVendorForm = new frmAddModifyVendor();
-            addModifyVendorForm.addVendor = true;
             DialogResult result = addModifyVendorForm.ShowDialog();
             if (result == DialogResult.OK)
             {
@@ -123,7 +122,6 @@ namespace PayableEntry
         private void btnModifyVendor_Click(object sender, EventArgs e)
         {
             frmAddModifyVendor addModifyVendorForm = new frmAddModifyVendor();
-            addModifyVendorForm.addVendor = false;
             addModifyVendorForm.vendor = vendor;
             DialogResult result = addModifyVendorForm.ShowDialog();
             if (result == DialogResult.OK)

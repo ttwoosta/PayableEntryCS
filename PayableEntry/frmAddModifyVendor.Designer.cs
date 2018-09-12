@@ -39,6 +39,7 @@
             this.termsIDComboBox = new System.Windows.Forms.ComboBox();
             this.Label1 = new System.Windows.Forms.Label();
             this.GroupBox1 = new System.Windows.Forms.GroupBox();
+            this.phoneTextBox = new System.Windows.Forms.TextBox();
             this.contactLNameTextBox = new System.Windows.Forms.TextBox();
             this.Label9 = new System.Windows.Forms.Label();
             this.contactFNameTextBox = new System.Windows.Forms.TextBox();
@@ -57,7 +58,6 @@
             this.Label2 = new System.Windows.Forms.Label();
             this.btnAccept = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.phoneTextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.vendorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stateBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.termsBindingSource)).BeginInit();
@@ -155,6 +155,15 @@
             this.GroupBox1.TabIndex = 12;
             this.GroupBox1.TabStop = false;
             this.GroupBox1.Text = "Contact information:";
+            // 
+            // phoneTextBox
+            // 
+            this.phoneTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vendorBindingSource, "Phone", true));
+            this.phoneTextBox.Location = new System.Drawing.Point(70, 20);
+            this.phoneTextBox.Name = "phoneTextBox";
+            this.phoneTextBox.Size = new System.Drawing.Size(100, 20);
+            this.phoneTextBox.TabIndex = 1;
+            this.phoneTextBox.Tag = "Phone";
             // 
             // contactLNameTextBox
             // 
@@ -328,15 +337,7 @@
             this.btnCancel.TabIndex = 14;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
-            // 
-            // phoneTextBox
-            // 
-            this.phoneTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vendorBindingSource, "Phone", true));
-            this.phoneTextBox.Location = new System.Drawing.Point(70, 20);
-            this.phoneTextBox.Name = "phoneTextBox";
-            this.phoneTextBox.Size = new System.Drawing.Size(100, 20);
-            this.phoneTextBox.TabIndex = 1;
-            this.phoneTextBox.Tag = "Phone";
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // frmAddModifyVendor
             // 

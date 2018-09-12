@@ -32,13 +32,12 @@
             this.mnuFile = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuExit = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuInvoice = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuVendorInvoices = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuVendor = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuFindVendor = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuAddModifyVendor = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuVendorInvoices = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuAddInvoice = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuListVendors = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.mnuListVendors = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuMain.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,18 +65,24 @@
             // mnuExit
             // 
             this.mnuExit.Name = "mnuExit";
-            this.mnuExit.Size = new System.Drawing.Size(202, 24);
+            this.mnuExit.Size = new System.Drawing.Size(103, 24);
             this.mnuExit.Text = "E&xit";
             this.mnuExit.Click += new System.EventHandler(this.mnuExit_Click);
             // 
             // mnuInvoice
             // 
             this.mnuInvoice.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnuVendorInvoices,
-            this.mnuAddInvoice});
+            this.mnuVendorInvoices});
             this.mnuInvoice.Name = "mnuInvoice";
             this.mnuInvoice.Size = new System.Drawing.Size(64, 23);
             this.mnuInvoice.Text = "&Invoice";
+            // 
+            // mnuVendorInvoices
+            // 
+            this.mnuVendorInvoices.Name = "mnuVendorInvoices";
+            this.mnuVendorInvoices.Size = new System.Drawing.Size(248, 24);
+            this.mnuVendorInvoices.Text = "Search Invoice by VendorId";
+            this.mnuVendorInvoices.Click += new System.EventHandler(this.mnuVendorInvoices_Click);
             // 
             // mnuVendor
             // 
@@ -101,22 +106,13 @@
             // 
             this.mnuAddModifyVendor.Name = "mnuAddModifyVendor";
             this.mnuAddModifyVendor.Size = new System.Drawing.Size(226, 24);
-            this.mnuAddModifyVendor.Text = "Add or Modify Vendor";
+            this.mnuAddModifyVendor.Text = "Add New Vendor";
             this.mnuAddModifyVendor.Click += new System.EventHandler(this.mnuAddModifyVendor_Click);
             // 
-            // mnuVendorInvoices
+            // toolStripSeparator1
             // 
-            this.mnuVendorInvoices.Name = "mnuVendorInvoices";
-            this.mnuVendorInvoices.Size = new System.Drawing.Size(248, 24);
-            this.mnuVendorInvoices.Text = "Search Invoice by VendorId";
-            this.mnuVendorInvoices.Click += new System.EventHandler(this.mnuVendorInvoices_Click);
-            // 
-            // mnuAddInvoice
-            // 
-            this.mnuAddInvoice.Name = "mnuAddInvoice";
-            this.mnuAddInvoice.Size = new System.Drawing.Size(248, 24);
-            this.mnuAddInvoice.Text = "Add New Invoice";
-            this.mnuAddInvoice.Click += new System.EventHandler(this.mnuAddInvoice_Click);
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(223, 6);
             // 
             // mnuListVendors
             // 
@@ -124,11 +120,6 @@
             this.mnuListVendors.Size = new System.Drawing.Size(226, 24);
             this.mnuListVendors.Text = "List Vendors";
             this.mnuListVendors.Click += new System.EventHandler(this.mnuListVendors_Click);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(223, 6);
             // 
             // frmMain
             // 
@@ -157,7 +148,6 @@
         private System.Windows.Forms.ToolStripMenuItem mnuVendor;
         private System.Windows.Forms.ToolStripMenuItem mnuFindVendor;
         private System.Windows.Forms.ToolStripMenuItem mnuVendorInvoices;
-        private System.Windows.Forms.ToolStripMenuItem mnuAddInvoice;
         private System.Windows.Forms.ToolStripMenuItem mnuAddModifyVendor;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem mnuListVendors;

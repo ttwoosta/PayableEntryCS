@@ -152,6 +152,7 @@
             this.Name = "frmFindVendor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Find Vendor";
+            this.Load += new System.EventHandler(this.frmFindVendor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.vendorBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

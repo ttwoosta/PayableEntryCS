@@ -291,5 +291,49 @@ namespace PayablesData
             }
             return vendorList;
         }
+
+        public static List<Vendor> GetAllVendors()
+        {
+            List<Vendor> vendorList = new List<Vendor>();
+            SqlConnection connection = PayablesDB.GetConnection();
+            string selectStatement =
+                "SELECT VendorID, Name, Address1, Address2, City, State, " +
+                "       ZipCode, Phone, ContactFName, ContactLName, " +
+                "       DefaultAccountNo, DefaultTermsID " +
+                "FROM Vendors ";
+            SqlCommand selectCommand = new SqlCommand(selectStatement, connection);
+            try
+            {
+                connection.Open();
+                SqlDataReader reader = selectCommand.ExecuteReader();
+                while (reader.Read())
+                {
+                    Vendor vendor = new Vendor();
+                    vendor.VendorID = (int)reader["VendorID"];
+                    vendor.Name = reader["Name"].ToString();
+                    vendor.Address1 = reader["Address1"].ToString();
+                    vendor.Address2 = reader["Address2"].ToString();
+                    vendor.City = reader["City"].ToString();
+                    vendor.State = reader["State"].ToString();
+                    vendor.ZipCode = reader["ZipCode"].ToString();
+                    vendor.Phone = reader["Phone"].ToString();
+                    vendor.ContactFName = reader["ContactFName"].ToString();
+                    vendor.ContactLName = reader["ContactLName"].ToString();
+                    vendor.DefaultAccountNo = (int)reader["DefaultAccountNo"];
+                    vendor.DefaultTermsID = (int)reader["DefaultTermsID"];
+                    vendorList.Add(vendor);
+                }
+                reader.Close();
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                connection.Close();
+            }
+            return vendorList;
+        }
     }
 }

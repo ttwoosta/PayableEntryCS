@@ -15,7 +15,7 @@ namespace PayableEntry
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmVendorInvoices());
+            Application.Run(new frmMain());
         }
     }
 }
